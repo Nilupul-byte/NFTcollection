@@ -871,11 +871,11 @@
 			]
 		},
 		"siriNFT.sol": {
-			"keccak256": "0xdaceaad785072e7230b78419cdea985132a7a02472c29f0588a256b3406eec60",
+			"keccak256": "0xd05f3b2a56217a62fb6328c5fdc6fe6a3f8880d673eeecd28a0c2e0591afc680",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c3d0e28a90e650638b9abfea8981f9aa6c78c4ae51fb62cbeb795769b1bd6578",
-				"dweb:/ipfs/QmUwAbM5tFcrbbGbfLBsEYFvxpfYa1MM3qtRspErYt72Ck"
+				"bzz-raw://fd36a421f1af1bb95cb943a3e75b1d16da1d08595de3bb45127dd98d5d3b68eb",
+				"dweb:/ipfs/Qmbvqv4bXixggAXdJRzotPZgqyDmVznF5doM68YFai7RU7"
 			]
 		}
 	},
