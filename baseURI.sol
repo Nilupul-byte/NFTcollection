@@ -16,8 +16,9 @@ constructor(string memory baseURI_) ERC721("SIRI NFT", "SIRI") Ownable(msg.sende
     function mint() external {
         require(totalSupply < MAX_SUPPLY, "Max supply reached");
         
+       _safeMint(msg.sender, totalSupply);
         totalSupply++;
-        _safeMint(msg.sender, totalSupply);
+        
     }
 
 
