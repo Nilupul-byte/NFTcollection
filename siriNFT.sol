@@ -14,8 +14,9 @@ contract OpenSeaNFT is ERC721, Ownable {
     function mint() external {
         require(totalSupply < MAX_SUPPLY, "Max supply reached");
         
-        totalSupply++;
         _safeMint(msg.sender, totalSupply);
+        totalSupply++;
+        
     }
 
     function _baseURI() internal pure override returns (string memory) {
