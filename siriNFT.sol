@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract OpenZeppelinNFT is ERC721, Ownable {
 
     uint256 public tokenSupply = 0;
-    uint256 public constant MAX_SUPPLY = 1000;
+    uint256 public constant MAX_SUPPLY = 10;
     uint256 public constant PRICE = 0.00000001 ether;
 
      string baseURL = "ipfs.io/ipfs/bafybeigqgtmsfvecsihusxuaqdx3mhjjdi5dpaga7u4eauhttoty3i7nme/";
