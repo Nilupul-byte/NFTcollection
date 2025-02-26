@@ -7,20 +7,23 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract OpenSeaNFT is ERC721, Ownable {
     uint256 public totalSupply;
     uint256 public constant MAX_SUPPLY = 10;
-    string private constant BASE_URI = "ipfs.io/ipfs/bafybeigqgtmsfvecsihusxuaqdx3mhjjdi5dpaga7u4eauhttoty3i7nme/";
+    string private baseTokenURI;  
 
-    constructor() ERC721("SIRI NFT", "SIRI") Ownable(msg.sender) {}
+constructor(string memory baseURI_) ERC721("SIRI NFT", "SIRI") Ownable(msg.sender) {
+    baseTokenURI = baseURI_;  // Use a different name for the constructor parameter
+}
 
     function mint() external {
         require(totalSupply < MAX_SUPPLY, "Max supply reached");
         
-        _safeMint(msg.sender, totalSupply);
+       _safeMint(msg.sender, totalSupply);
         totalSupply++;
         
     }
 
-    function _baseURI() internal pure override returns (string memory) {
-        return BASE_URI;
+
+    function _baseURI() internal view override returns (string memory) {
+    return baseTokenURI;
     }
 
     function withdraw() external onlyOwner {
